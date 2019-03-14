@@ -1,0 +1,47 @@
+{
+  "name": "@mkusaka/pref",
+  "version": "0.0.1",
+  "description": "performance check with lighthouse cli wrapper",
+  "main": "dist/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "tslint --project \"./tsconfig.json\"",
+    "test": "mocha -r ts-node/register \"test/**/*.ts\" --reporter spec",
+    "docs": "typedoc --out docs src",
+    "gh-pages": "rimraf docs && yarn run docs && gh-pages -d docs",
+    "ci": "yarn run lint && yarn run build",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "yarn run ci",
+    "preversion": "yarn run ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkusaka/mflux.git"
+  },
+  "keywords": [
+    "private package"
+  ],
+  "author": "mkusaka <hinoshita1992@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkusaka/mflux/perf_check"
+  },
+  "homepage": "https://github.com/mkusaka/perf_check#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.10.4",
+    "chai": "^4.2.0",
+    "gh-pages": "^2.0.1",
+    "mocha": "^6.0.2",
+    "prettier": "^1.16.4",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.13.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3333"
+  }
+}
