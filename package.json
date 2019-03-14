@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "webpack --mode=development",
     "build:watch": "tsc --watch",
     "lint": "tslint --project \"./tsconfig.json\"",
     "test": "mocha -r ts-node/register \"test/**/*.ts\" --reporter spec",
@@ -36,12 +36,17 @@
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.10.4",
     "chai": "^4.2.0",
-    "gh-pages": "^2.0.1",
     "mocha": "^6.0.2",
     "prettier": "^1.16.4",
+    "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
     "tslint": "^5.13.1",
     "typedoc": "^0.14.2",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "bin": {
+    "fizzbuzz": "./bin/fizzbuzz.js"
   }
 }
