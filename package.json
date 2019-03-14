@@ -48,5 +48,8 @@
   },
   "bin": {
     "fizzbuzz": "./bin/fizzbuzz.js"
+  },
+  "dependencies": {
+    "lighthouse": "^4.2.0"
   }
 }
